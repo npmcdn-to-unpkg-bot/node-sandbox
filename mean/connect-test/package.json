@@ -1,0 +1,10 @@
+{
+  "name": "connect-test",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.3.4"
+  }
+}

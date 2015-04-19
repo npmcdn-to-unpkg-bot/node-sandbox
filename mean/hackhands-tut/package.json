@@ -1,0 +1,11 @@
+{
+  "name": "tutMeanApplication",
+  "version": "0.0.1",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.2.4",
+    "express": "latest",
+    "gulp": "latest",
+    "mongoose": "^3.8.22"
+  }
+}

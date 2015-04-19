@@ -1,0 +1,9 @@
+{
+  "name": "express-blog",
+  "description": "Example Express-based blog site",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "4.x",
+    "jade": "^1.9.2"
+  }
+}

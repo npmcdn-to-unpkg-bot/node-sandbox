@@ -1,0 +1,11 @@
+{
+  "name": "express-static-test",
+  "version": "0.0.1",
+  "description": "Simple statis express server",
+  "main": "index.js",
+  "author": "Clay Carpenter",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.1"
+  }
+}

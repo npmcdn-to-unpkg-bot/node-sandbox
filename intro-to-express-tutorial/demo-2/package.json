@@ -1,0 +1,9 @@
+{
+  "name": "expressdemo2",
+  "description": "Tutorial Express site",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "4.x",
+    "express-handlebars": "^1.1.0"
+  }
+}

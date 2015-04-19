@@ -1,0 +1,10 @@
+//- Mixins
+include mixins/articleSummary
+
+include navHeader
+
+include articleHeader
+
+ul
+    for comment in comments
+        +articleSummary(comment)
