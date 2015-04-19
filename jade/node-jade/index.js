@@ -12,7 +12,7 @@ var fs_readFile = Q.denodeify(fs.readFile);
 
 fs_readFile(jadeFile, 'utf8')
     .then(function (contents) {
-        var templateFn = jade.compile(contents, {pretty: true});
+        var templateFn = jade.compile(contents, {pretty: true, filename: jadeFile});
         var html = templateFn({});
         
         console.log(html);
