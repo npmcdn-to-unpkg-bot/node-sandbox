@@ -36,4 +36,13 @@ describe('Tags', function () {
             expect(results).to.have.a.property('searchContents', true);
         });
     });  
+    
+    describe('#parseValue', function () {
+        it('should parse text as a string', function () {
+            var args = expected = 'hello';
+            var results = tags.parseValue(args);
+            
+            expect(results).to.equal(expected);
+        });
+    });
 });

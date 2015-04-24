@@ -40,3 +40,7 @@ exports.parse = function (args, defaults) {
     
     return options;    
 };
+
+exports.parseValue = function parseValue (value) {
+    return value;
+};
