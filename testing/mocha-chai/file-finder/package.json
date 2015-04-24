@@ -1,0 +1,14 @@
+{
+  "name": "file-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Clay Carpenter",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^2.2.0"
+  }
+}
