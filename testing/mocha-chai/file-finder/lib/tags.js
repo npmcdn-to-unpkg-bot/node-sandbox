@@ -17,7 +17,7 @@ exports.parse = function (args, defaults) {
         if (/^--/.test(argument)) {
             argument = argument.substr(2);
             
-            // Check for equals sign
+            // Check for key=value pairs by looking for an equals sign.
             if (argument.indexOf('=') !== -1) {
                 var argumentKeyValuePair = argument.split('=');
                 
@@ -30,6 +30,10 @@ exports.parse = function (args, defaults) {
                 }
                 
                 options[key] = value;
+            } else {
+                // As this is not a key-value pair, store argument as options
+                // key with a value of true.
+                options[argument] = true;
             }
         }
     });
