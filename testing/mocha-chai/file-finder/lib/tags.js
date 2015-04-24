@@ -42,5 +42,12 @@ exports.parse = function (args, defaults) {
 };
 
 exports.parseValue = function parseValue (value) {
-    return value;
+    var parsedValue = value;
+    
+    if (/^[0-9]+$/.test(value)) {
+        // Convert value from string into number.
+        parsedValue = parseInt(value, 10);
+    }
+    
+    return parsedValue;
 };

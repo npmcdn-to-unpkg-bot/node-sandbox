@@ -39,10 +39,20 @@ describe('Tags', function () {
     
     describe('#parseValue', function () {
         it('should parse text as a string', function () {
-            var args = expected = 'hello';
+            var args = 'hello',
+                expected = args;
             var results = tags.parseValue(args);
             
             expect(results).to.equal(expected);
+        });
+        
+        it('should parse a numeric value as a number', function () {
+            var args = '4',
+                expected = 4;
+            
+            var results = tags.parseValue(args);
+            
+            expect(results).to.equals(expected);
         });
     });
 });
