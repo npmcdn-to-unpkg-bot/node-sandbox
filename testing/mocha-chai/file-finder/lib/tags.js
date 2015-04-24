@@ -19,13 +19,13 @@ exports.parse = function (args) {
                 
                 if (/^[0-9]+$/.test(value)) {
                     // Convert value from string into number.
-                    value = parseInt(value);
+                    value = parseInt(value, 10);
                 }
                 
                 options[key] = value;
             }
         }
-    })
+    });
     
     return options;    
 };
