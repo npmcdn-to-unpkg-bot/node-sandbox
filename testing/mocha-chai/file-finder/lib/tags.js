@@ -1,8 +1,15 @@
 
 exports = module.exports = Object.create(null);
 
-exports.parse = function (args) {
+exports.parse = function (args, defaults) {
     var options = Object.create(null);
+    
+    // Initialize the options model with any default values.
+    for (var key in defaults) {
+        if (defaults.hasOwnProperty(key)) {
+            options[key] = defaults[key];
+        }
+    }
     
     // Iterate over arguments.
     args.forEach(function (argument) {
