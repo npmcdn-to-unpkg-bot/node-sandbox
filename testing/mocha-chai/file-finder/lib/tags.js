@@ -1,7 +1,7 @@
 
 exports = module.exports = Object.create(null);
 
-exports.parse = function (args, defaults) {
+function parse (args, defaults) {
     var options = Object.create(null);
     
     // Initialize the options model with any default values.
@@ -24,10 +24,7 @@ exports.parse = function (args, defaults) {
                 var key = argumentKeyValuePair.shift(),
                     value = argumentKeyValuePair.shift();
                 
-                if (/^[0-9]+$/.test(value)) {
-                    // Convert value from string into number.
-                    value = parseInt(value, 10);
-                }
+                value = parseValue(value);
                 
                 options[key] = value;
             } else {
@@ -41,7 +38,7 @@ exports.parse = function (args, defaults) {
     return options;    
 };
 
-exports.parseValue = function parseValue (value) {
+function parseValue (value) {
     var parsedValue = value;
     
     if (/^[0-9]+$/.test(value)) {
@@ -51,3 +48,7 @@ exports.parseValue = function parseValue (value) {
     
     return parsedValue;
 };
+
+// Define exports
+exports.parse = parse;
+exports.parseValue = parseValue;
