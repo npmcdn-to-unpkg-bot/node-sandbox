@@ -52,3 +52,16 @@ exports.scan = function scan (dir, depth, done) {
     });
 };
 
+exports.match = function match (query, files) {
+    var matches = [];
+
+    files.forEach(function (filename) {
+        if (filename.indexOf(query) !== -1) {
+            matches.push(filename);
+        } 
+    });
+    
+    return matches;
+};
+
+
