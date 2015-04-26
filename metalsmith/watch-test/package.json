@@ -1,0 +1,16 @@
+{
+  "name": "metalsmith-watch-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "metalsmith": "^1.6.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-watch": "^0.2.0"
+  }
+}
