@@ -2,7 +2,7 @@
 // Note: all of these are relative to the project root.
 var projectPaths = {
     scssSources: 'src/scss',
-    wwwRoot: 'www'
+    outputRoot: 'output'
 };
 
 // Import required dependencies.
@@ -15,19 +15,19 @@ var gulp = require('gulp'),
 
 var browserSyncConfig = {
     server: {
-        baseDir: './' + projectPaths.wwwRoot
+        baseDir: './' + projectPaths.outputRoot
     },
     files: [
-        projectPaths.wwwRoot + '/css/*.css',
-        projectPaths.wwwRoot + '/*.html',
-        projectPaths.wwwRoot + '/js/*.js'
+        projectPaths.outputRoot + '/css/*.css',
+        projectPaths.outputRoot + '/*.html',
+        projectPaths.outputRoot + '/js/*.js'
     ]
 };
 
 gulp.task('sass', function() {
    return gulp.src(projectPaths.scssSources + '/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest(projectPaths.wwwRoot + '/css'))
+        .pipe(gulp.dest(projectPaths.outputRoot + '/css'))
         .pipe(filter('**/*.css'))
         .pipe(browserSyncReload({stream: true}));
 });
@@ -39,7 +39,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('copy-html', function() {
    gulp.src(['./src/html/**/*.html'])
-        .pipe(gulp.dest('./www/'));
+        .pipe(gulp.dest('./output/'));
 });
 
 gulp.task('watch', function() {
