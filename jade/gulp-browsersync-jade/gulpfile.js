@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     browserSyncReload = browserSync.reload,
     sass = require('gulp-sass'),
     filter = require('gulp-filter'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    jade = require('gulp-jade');
 
 var browserSyncConfig = {
     server: {
@@ -36,6 +37,11 @@ gulp.task('browser-sync', function() {
     browserSync(browserSyncConfig);
 });
 
+gulp.task('jade-compile', function () {
+    gulp.src('./src/jade/**/*.jade')
+        .pipe(jade({pretty: true}))
+        .pipe(gulp.dest('./output/'));
+});
 
 gulp.task('copy-html', function() {
    gulp.src(['./src/html/**/*.html'])
@@ -44,8 +50,11 @@ gulp.task('copy-html', function() {
 
 gulp.task('watch', function() {
     gulp.watch(projectPaths.scssSources + '/*.scss', ['sass']);
+
+    gulp.watch('src/jade/**/*.jade', ['jade-compile']);
     
     gulp.watch('src/html/**/*.html', ['copy-html']);
 });
 
-gulp.task('default', ['sass', 'copy-html', 'browser-sync', 'watch']);
+gulp.task('default', 
+    ['sass', 'jade-compile', 'copy-html', 'browser-sync', 'watch']);
