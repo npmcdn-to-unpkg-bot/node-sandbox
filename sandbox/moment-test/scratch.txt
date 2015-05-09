@@ -1,0 +1,40 @@
+var mom = require('moment')
+momn
+mom
+mom.format('dddd')
+mom().format('dddd')
+mom().format('h:mm:ss a')
+var now = mom()
+now.format('h:mm:ss a')
+now.format('h:mm:ss a')
+now.format('h:mm:ss a')
+mom().format('h:mm:ss a')
+mom().format('h:mm:ss a')
+mom().format('h:mm:ss a')
+mom().startOf('hour').fromNow()
+now.startOf('hour').fromNow()
+now
+now.format()
+mom().format()
+mom().format()
+mom().format()
+var yearsOld = '19820203', yearFormat = 'YYYYMMDD';
+mom(yearsOld, yearFormat).fromNow()
+mom(yearsOld, yearFormat).calendar()
+mom(yearsOld, yearFormat).add(30, 'years')
+mom(yearsOld, yearFormat).add(30, 'years').calendar()
+mom(yearsOld).calendar()
+mom(yearsOld.format()).calendar()
+mom(mom(yearsOld, yearFormat).format()).calendar()
+mom(now.format()).calendar()
+
+var fs = require('fs')
+var stats = fs.statSync('./comments-test.md')
+stats
+stats.ctime
+typeof stats.ctime
+typeof stats.ctime.toString()
+stats.ctime.toString()
+var fsCreateTime = mom(stats.ctime.toString())
+fsCreateTime.format()
+fsCreateTime.fromNow()
