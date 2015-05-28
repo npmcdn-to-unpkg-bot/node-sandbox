@@ -1,0 +1,20 @@
+/*! 
+    Copyright 2015 Initech 
+    
+    This will always be present, no matter the output style.
+*/
+
+/*
+    Multi-line comment.
+    
+    This will be present in all output styles other than compressed.
+*/
+body {
+    font-size: 16px;
+}
+
+// Single-line dev comment.
+// This will be removed in all output styles.
+h1 {
+    font-size: 1.8em;  
+}
