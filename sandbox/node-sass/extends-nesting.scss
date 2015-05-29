@@ -1,0 +1,12 @@
+.btn-a {
+     background: #777777;
+     border: 1px solid #ccc;
+
+     &:hover {
+          background: #cecece;
+     }
+}
+.btn-b {
+     @extend .btn-a;
+     background: #ffff00;
+}
