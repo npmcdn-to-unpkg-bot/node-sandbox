@@ -9,7 +9,6 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'dist/es5.js': 'js/es6.js',
-          'dist/test-5.js': 'js/test-6.js'
         }
       }
     }
