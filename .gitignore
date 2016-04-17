@@ -4,3 +4,5 @@ node_modules
 
 # Cloud9 Settings
 .c9
+
+es2015/dist
