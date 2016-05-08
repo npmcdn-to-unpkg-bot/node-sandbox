@@ -38,6 +38,21 @@
     console.log(x);   // "foo"
   }
 
+  // Changing object keys
+  {
+    // Implicit prop assignment
+    let {a, b} = {a: 'one', b: 'two'};
+    console.log(a, b);    // "one two"
+
+    // Explicit prop assignment
+    let {a: a, b: b} = {a: 'one', b: 'two'};
+    console.log(a, b);    // "one two"
+
+    // Explicit prop assignment
+    let {a: alpha, b: beta} = {a: 'one', b: 'two'};
+    console.log(alpha, beta);    // "one two"
+  }
+
   // Fail-soft behavior
   {
     let [, notIgnored] = ['ignored', 'not ignored'];
