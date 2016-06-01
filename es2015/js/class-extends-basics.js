@@ -29,6 +29,37 @@
     // => My name is Michael and I'm working on monthly reports--like a boss!
   }
 
+  // Simple extends usage, super usage
+  {
+    class Employee {
+      constructor(name) {
+        this.name = name;
+      }
+
+      reportWork(task) {
+        return `My name is ${this.name} and I'm working on ${task}`
+      }
+    }
+
+    class Manager extends Employee {
+      constructor(name) {
+        super(name);
+      }
+      
+      reportWork(task) {
+        return `${super.reportWork(task)}--like a boss!`;
+      }
+    }
+
+    const jim = new Employee('Jim'),
+          michael = new Manager('Michael');
+
+    console.log(jim.reportWork('spreadsheets'));
+    // => My name is Jim and I'm working on spreadsheets
+    console.log(michael.reportWork('monthly reports'));
+    // => My name is Michael and I'm working on monthly reports--like a boss!
+  }
+
   // Classes can use super in constructor, but must do so before referencing this.
   {
     class Original { }
