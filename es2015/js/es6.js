@@ -114,7 +114,7 @@
   console.log(Number.parseFloat('1.0'));
 }());
 
-// array methods
+// array methods (X)
 (function() {
   'use strict';
 
@@ -158,7 +158,7 @@
   console.log(superheroes.copyWithin(1, 0));
 }());
 
-// object literals
+// object literals (X)
 (function() {
   'use strict';
 
@@ -189,7 +189,7 @@
   console.log(composedObj);
 }());
 
-// sets
+// sets (X)
 (function() {
   'use strict';
 
