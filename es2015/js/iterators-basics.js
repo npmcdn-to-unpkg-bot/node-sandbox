@@ -23,12 +23,12 @@
         iteration;
 
     iteration = valuesIterator.next();  // Get 'a' value
-    console.log(JSON.stringify(iteration));
+    console.log(JSON.stringify(iteration)); // {"value":"a","done":false}
 
     valuesIterator.next(); // Skip 'b'
 
     iteration = valuesIterator.next(); // End of iterator set
-    console.log(JSON.stringify(iteration));
+    console.log(JSON.stringify(iteration)); // {"done":true}
   }
 
   {
