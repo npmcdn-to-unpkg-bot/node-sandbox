@@ -232,7 +232,7 @@
   console.log(betterMap.has('deep'));
 }());
 
-// iterators
+// iterators (X)
 (function() {
   'use strict';
 
@@ -258,7 +258,7 @@
   console.log(myMapKeys.next());
 }());
 
-// for of loop
+// for of loop (X)
 (function() {
   'use strict';
 
@@ -277,7 +277,7 @@
   }
 }());
 
-// arrow functions
+// arrow functions (X)
 (function() {
   'use strict';
 
@@ -340,7 +340,7 @@
     });
 }());
 
-// classes
+// classes (X)
 (function() {
   'use strict';
 
@@ -383,7 +383,7 @@
   micheal.work();
 }());
 
-// destructuring
+// destructuring (X)
 (function() {
   'use strict';
 
